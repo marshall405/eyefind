@@ -10,10 +10,16 @@
   }
   
   .header-top {
-    
+    padding-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .header-top .logo {
+    width: 200px;
+  }
+  .header-top .email-links {
+    width: 50%;
   }
   .header-top .email-links ul{
     list-style: none;

@@ -9,7 +9,10 @@
   --main-width: 1050px;
 }
 
-
+.main {
+  max-width: var(--main-width);
+  margin: 0 auto;
+}
 
 
 

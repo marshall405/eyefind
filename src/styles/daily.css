@@ -1,0 +1,15 @@
+.daily-container {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+}
+.daily-container .daily-vert {
+    background: #FFF;
+    width: 1px;
+    height: 40px;
+    margin: 0px 15px;
+}
+
+.daily-container .daily-left-side p {
+    text-align: right;
+}
