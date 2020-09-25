@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Search from "./Search"
+
+import '../styles/header.css'
+
 export default function Header() {
     return (
         <div className="header">
