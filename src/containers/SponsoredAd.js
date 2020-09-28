@@ -9,6 +9,7 @@ export default function SponsoredAd(props) {
                 <p> SPONSORED ADVERTISEMENT </p>
                 <div className="ad-image">
                     <h1 className="img-title"> {ad.name} </h1>
+                    <img src={ad.img_src} alt={ad.name} />
                 </div>
             </div >
         )

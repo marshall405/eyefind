@@ -9,7 +9,7 @@ export default function Home() {
         fetch(`http://localhost:3001/api/places?lat=${latitude}&lng=${longitude}`)
             .then(res => res.json())
             .then(json => {
-                setPlaces(json.results)
+                setPlaces(json)
             })
     }
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function Home() {
     return (
         <div className="main home">
             <SponsoredAds ads={places} />
-            <Ads ads={places} />
+            <Ads ads={places.slice(4, places.length - 1)} />
         </div>
     )
 }

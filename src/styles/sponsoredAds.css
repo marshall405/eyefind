@@ -20,6 +20,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin: 1px;
+  
 }
 
 .sponsored-ad p {
@@ -54,7 +56,12 @@
 
 .sponsored-ad .ad-image img {
     width: 100%;
-
+    cursor: pointer;
     filter:brightness(.5) blur(2px);
     text-align: center;
+}
+
+.sponsored-ad .ad-image:hover img{
+    filter: blur(0px);
+    z-index: 2;
 }
