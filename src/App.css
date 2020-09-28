@@ -2,7 +2,8 @@
 
 :root {
   --primary-color: rgb(93, 160, 223);
-  --secondary-color: rgb(41, 145, 172);
+  --secondary-color: rgb(5, 113, 143);
+  /* --secondary-color: rgb(41, 145, 172); */
   --secondary-color-hover: rgb(50, 158, 185);
   --primary-text-color-hover: rgb(13, 59, 146);
   --primary-gold-border: rgb(255, 208, 0);
