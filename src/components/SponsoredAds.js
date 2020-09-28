@@ -4,12 +4,13 @@ import SponsoredAd from '../containers/SponsoredAd'
 
 import '../styles/sponsoredAds.css'
 
-export default function SponsoredAds() {
+export default function SponsoredAds(props) {
+    let [one, two, three] = props.ads
     return (
         <div className="sponsored-ads-container">
-            <SponsoredAd />
-            <SponsoredAd />
-            <SponsoredAd />
+            <SponsoredAd ad={one} />
+            <SponsoredAd ad={two} />
+            <SponsoredAd ad={three} />
         </div>
     )
 }
