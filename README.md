@@ -1,5 +1,5 @@
 ![Screenshof of Eyefind.info]
-(https://github.com/marshall405/eyefind/blob/master/src/media/screenshot.png)
+(./src/media/screenshot.png)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
