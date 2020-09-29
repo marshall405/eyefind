@@ -21,7 +21,6 @@
   display: flex;
   flex-direction: column;
   margin: 1px;
-  
 }
 
 .sponsored-ad p {
@@ -70,12 +69,31 @@
 .sponsored-ad .ad-image span {
     /* background: red; */
     border-radius: 50%;
-    border-top: 2px solid var(--primary-gold-border);
+    border: 3px solid var(--primary-color);
+    border-top: 3px solid var(--primary-gold-border);
+    border-right: 3px solid var(--primary-gold-border);
     width: 120px;
     height: 120px;
-    animation: spin infinite ease-in-out 2s;
+    animation: spin infinite linear 2s;
 }
 
+.sponsored-ad .ad-image span.odd{
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    border-top: 3px solid var(--primary-gold-border);
+    border-right: 3px solid var(--primary-gold-border);
+    width: 120px;
+    height: 120px;
+    animation: spinBackwards infinite linear 2s;
+}
+@keyframes spinBackwards {
+    from {
+        transform: rotate(360deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
 @keyframes spin {
     from {
         transform: rotate(0deg)

@@ -9,7 +9,7 @@ export default function SponsoredAds(props) {
     return (
         <div className="sponsored-ads-container">
             <SponsoredAd ad={one} />
-            <SponsoredAd ad={two} />
+            <SponsoredAd ad={two} odd />
             <SponsoredAd ad={three} />
         </div>
     )
