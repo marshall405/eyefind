@@ -1,5 +1,6 @@
 ![Screenshof of Eyefind.info]
-(src/media/screenshot.png?raw=true)
+
+<img src="./src/media/screenshot.png">
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
