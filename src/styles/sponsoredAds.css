@@ -59,9 +59,28 @@
     cursor: pointer;
     filter:brightness(.5) blur(2px);
     text-align: center;
+    transition: opacity .25s ease-in; 
 }
 
 .sponsored-ad .ad-image:hover img{
     filter: blur(0px);
     z-index: 2;
+}
+
+.sponsored-ad .ad-image span {
+    /* background: red; */
+    border-radius: 50%;
+    border-top: 2px solid var(--primary-gold-border);
+    width: 120px;
+    height: 120px;
+    animation: spin infinite ease-in-out 2s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
 }

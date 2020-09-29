@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SponsoredAd(props) {
     let ad = props.ad
-    console.log(ad)
+
     if (ad) {
         return (
             <div className="sponsored-ad" >
@@ -18,7 +18,7 @@ export default function SponsoredAd(props) {
             <div className="sponsored-ad" >
                 <p> SPONSORED ADVERTISEMENT </p>
                 <div className="ad-image">
-                    IMAGE HERE
+                    <span></span>
                 </div>
             </div >
         )

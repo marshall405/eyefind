@@ -3,6 +3,7 @@
   margin: 10px 0px;
   display: flex;
   justify-content: space-between;
+  cursor: text;
 }
 .search-bar {
   display: flex;
@@ -21,7 +22,6 @@
   margin-left: 10px;
   padding: 5px;
   border: none;
-  box-shadow: 0px 1px 1px lightgrey;
 }
 .search-bar input:focus {
   outline: none;
