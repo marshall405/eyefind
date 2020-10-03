@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import '../styles/navbar.css'
 
 export default function NavBar() {
@@ -8,57 +8,57 @@ export default function NavBar() {
             <div className="nav-links">
                 <ul>
                     <li>
-                        <a href="#">
+                        <Link to="/media">
                             <span className="fas fa-mobile-alt fa-2x link-icon"></span>
                             <div>
                                 <span className="link-text"> MEDIA AND ENTERTAINMENT</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
 
                     <div className="link-vert"></div>
 
                     <li>
-                        <a href="#">
+                        <Link to="/victual">
                             <span className="fas fa-hamburger fa-2x"></span>
                             <div>
                                 <span className="link-text">FOOD <br /> AND DRINK</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
 
                     <div className="link-vert"></div>
 
                     <li>
-                        <a href="#">
+                        <Link to='/financials'>
                             <span className="fas fa-comment-dollar fa-2x"></span>
                             <div>
                                 <span className="link-text">MONEY<br />AND SERVICES</span>
                             </div>
-                        </a>
+                        </Link>
 
                     </li>
 
                     <div className="link-vert"></div>
 
                     <li>
-                        <a href="#">
+                        <Link to="/travel">
                             <span className="fas fa-plane fa-2x"></span>
                             <div>
                                 <span className="link-text">TRAVEL <br /> AND TRANSPORT</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
 
                     <div className="link-vert"></div>
 
                     <li>
-                        <a href="#">
+                        <Link to="/personal">
                             <span className="fas fa-shopping-bag fa-2x"></span>
                             <div>
                                 <span className="link-text">FASHION <br /> AND HEALTH</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
 
                 </ul>
