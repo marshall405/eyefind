@@ -14,10 +14,11 @@ function App() {
       <Header />
       <NavBar />
 
-      <Route exact path="/" component={Home} />
-      <Route exact path="/media" component={MediaAndEntertainment} />
-      <Route exact path="/entertainment" component={MediaAndEntertainment} />
-
+      <div className="main">
+        <Route exact path="/" component={Home} />
+        <Route exact path="/media" component={MediaAndEntertainment} />
+        <Route exact path="/entertainment" component={MediaAndEntertainment} />
+      </div>
     </div>
   );
 }
