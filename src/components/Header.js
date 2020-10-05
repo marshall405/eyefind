@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 import Search from "./Search"
 import Daily from "./Daily"
 
@@ -10,7 +12,9 @@ export default function Header() {
             <div className="header-container">
 
                 <div className="header-top">
-                    <img className="logo" src={Logo} />
+                    <Link to="/">
+                        <img className="logo" src={Logo} />
+                    </Link>
                     <div className="email-links">
                         <ul>
                             <li><a href="#"><span className="fas fa-envelope" ></span><span className="email-text"> Inbox </span></a></li>

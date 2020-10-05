@@ -10,21 +10,27 @@ export default function Place() {
         fetch(process.env.REACT_APP_API_URL + id)
             .then(res => res.json())
             .then(json => {
+                if (json.result.photos) {
 
-                Promise.all(json.result.photos.map(photo => {
-                    return new Promise(res => {
-                        fetch(process.env.REACT_APP_API_URL + `img/${photo.photo_reference}`)
-                            .then(r => r.text())
-                            .then(location => {
-                                photo.location = location
-                                res(location)
-                            })
-                    })
-                }))
-                    .then(() => {
-                        setData(json.result)
-                        setLoading(false)
-                    })
+                    Promise.all(json.result.photos.map(photo => {
+                        return new Promise(res => {
+                            fetch(process.env.REACT_APP_API_URL + `img/${photo.photo_reference}`)
+                                .then(r => r.text())
+                                .then(location => {
+                                    photo.location = location
+                                    res(location)
+                                })
+                        })
+                    }))
+                        .then(() => {
+                            setData(json.result)
+                            setLoading(false)
+                        })
+                } else {
+                    json.result.photo = []
+                    setData(json.result)
+                    setLoading(false)
+                }
             })
         return () => {
 
