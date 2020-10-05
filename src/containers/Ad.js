@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Ad({ ad }) {
@@ -10,7 +10,7 @@ export default function Ad({ ad }) {
                 <h1> {ad.name}</h1>
                 {/* <img className="location-icon" src={ad.icon} alt={ad.name} /> */}
                 <i className="far fa-gem"></i>
-                <img className="location-image" src={ad.img_src} />
+                <img className="location-image" src={ad.img_src} alt={ad.name} />
             </div>
         </Link>
     )
