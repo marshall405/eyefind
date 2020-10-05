@@ -5,13 +5,12 @@ import Ads from './Ads'
 
 import fetchData from '../scripts/fetchData'
 
-export default function MediaAndEntertainment() {
-    let types = ['amusement_park', 'aquarium', 'casino', 'zoo', 'stadium', 'park', 'museum', 'night_club', 'movie_theater']
+export default function FoodAndDrink() {
+    let types = ['cafe', 'bakery', 'restaurant', 'bar', 'supermarket', 'meal_takeaway', 'liquor_store']
     const [data, setData] = useState([])
     useEffect(() => {
         let isCancelled = false;
         const abortController = new AbortController();
-
 
         fetchData(types, abortController)
             .then(data => {
@@ -19,8 +18,10 @@ export default function MediaAndEntertainment() {
                     setData(data)
                 }
             })
+
         return () => {
             isCancelled = true;
+
         }
     }, [])
     return (
