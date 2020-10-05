@@ -46,7 +46,6 @@ export default function Place() {
             {/* <p> {data.opening_hours.open_now ? 'OPEN' : 'CLOSED'} </p> */}
             {
                 data.photos.map(photo => <img key={photo.photo_reference} src={photo.location} />)
-
             }
         </div>
 
