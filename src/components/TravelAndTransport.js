@@ -5,9 +5,9 @@ import Ads from './Ads'
 
 import fetchData from '../scripts/fetchData'
 
-export default function TravelAndTransport() {
+export default function TravelAndTransport({ setPlaces, places }) {
     let types = ['airport', 'bus_station', 'campground', 'car_rental', 'travel_agency', 'transit_agency', 'taxi_stand', 'transit_station', 'subway_station', 'lodging', 'light_rail_station']
-    const [data, setData] = useState([])
+
     useEffect(() => {
         let isCancelled = false;
         const abortController = new AbortController();
@@ -15,7 +15,7 @@ export default function TravelAndTransport() {
         fetchData(types, abortController)
             .then(data => {
                 if (!isCancelled) {
-                    setData(data)
+                    setPlaces(data)
                 }
             })
 
@@ -25,8 +25,8 @@ export default function TravelAndTransport() {
     }, [])
     return (
         <div>
-            <SponsoredAds ads={data} />
-            <Ads ads={data.slice(4, data.length - 1)} />
+            <SponsoredAds ads={places} />
+            <Ads ads={places.slice(4, places.length - 1)} />
         </div>
     )
 }

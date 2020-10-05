@@ -1,4 +1,4 @@
-async function fetchData(types, abortController) {
+async function fetchData(types = [], abortController) {
     const URL = process.env.REACT_APP_API_URL
     let location = await new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject))
 

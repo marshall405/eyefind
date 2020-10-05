@@ -11,9 +11,20 @@ export default function Place() {
             .then(res => res.json())
             .then(json => {
 
-                setData(json.result)
-                setLoading(false)
-                console.log(json.result)
+                Promise.all(json.result.photos.map(photo => {
+                    return new Promise(res => {
+                        fetch(process.env.REACT_APP_API_URL + `img/${photo.photo_reference}`)
+                            .then(r => r.text())
+                            .then(location => {
+                                photo.location = location
+                                res(location)
+                            })
+                    })
+                }))
+                    .then(() => {
+                        setData(json.result)
+                        setLoading(false)
+                    })
             })
         return () => {
 
@@ -34,7 +45,7 @@ export default function Place() {
             <p> {data.formatted_phone_number} </p>
             {/* <p> {data.opening_hours.open_now ? 'OPEN' : 'CLOSED'} </p> */}
             {
-                data.photos.map(photo => <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=`} />)
+                data.photos.map(photo => <img key={photo.photo_reference} src={photo.location} />)
             }
         </div>
 
