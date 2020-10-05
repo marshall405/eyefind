@@ -5,9 +5,9 @@ import Ads from './Ads'
 
 import fetchData from '../scripts/fetchData'
 
-export default function FashionAndHealth() {
+export default function FashionAndHealth({ setPlaces, places }) {
     let types = ['beauty_salon', 'clothing_store', 'department_store', 'drugstore', 'jewelry_store', 'shopping_mall', 'shoe_store', 'pharmacy', 'hospital']
-    const [data, setData] = useState([])
+
     useEffect(() => {
         let isCancelled = false;
         const abortController = new AbortController();
@@ -15,7 +15,7 @@ export default function FashionAndHealth() {
         fetchData(types, abortController)
             .then(data => {
                 if (!isCancelled) {
-                    setData(data)
+                    setPlaces(data)
                 }
             })
 
@@ -26,8 +26,8 @@ export default function FashionAndHealth() {
     }, [])
     return (
         <div>
-            <SponsoredAds ads={data} />
-            <Ads ads={data.slice(4, data.length - 1)} />
+            <SponsoredAds ads={places} />
+            <Ads ads={places.slice(4, places.length - 1)} />
         </div>
     )
 }

@@ -5,9 +5,9 @@ import Ads from './Ads'
 
 import fetchData from '../scripts/fetchData'
 
-export default function MoneyAndServices() {
+export default function MoneyAndServices({ setPlaces, places }) {
     let types = ['bank', 'atm', 'accounting']
-    const [data, setData] = useState([])
+
     useEffect(() => {
         let isCancelled = false;
         const abortController = new AbortController();
@@ -15,7 +15,7 @@ export default function MoneyAndServices() {
         fetchData(types, abortController)
             .then(data => {
                 if (!isCancelled) {
-                    setData(data)
+                    setPlaces(data)
                 }
             })
 
@@ -26,8 +26,8 @@ export default function MoneyAndServices() {
     }, [])
     return (
         <div>
-            <SponsoredAds ads={data} />
-            <Ads ads={data.slice(4, data.length - 1)} />
+            <SponsoredAds ads={places} />
+            <Ads ads={places.slice(4, places.length - 1)} />
         </div>
     )
 }

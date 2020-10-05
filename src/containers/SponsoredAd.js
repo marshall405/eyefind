@@ -3,9 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 export default function SponsoredAd(props) {
     let ad = props.ad
     let path = useLocation().pathname
+
     if (ad) {
         return (
-            <Link to={`${path}/${ad.place_id}`}>
+            <Link to={`${path === '/' ? 'home' : path}/${ad.place_id}`}>
                 <div className="sponsored-ad" >
                     <p> SPONSORED ADVERTISEMENT </p>
                     <div className="ad-image">

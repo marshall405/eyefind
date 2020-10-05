@@ -2,18 +2,28 @@ import React, { useEffect, useState } from 'react'
 
 import SponsoredAds from './SponsoredAds'
 import Ads from './Ads'
-export default function Home() {
-    const [places, setPlaces] = useState([])
-    const fetchPlaces = async (location) => {
-        let { latitude, longitude } = location.coords
-        fetch(`http://localhost:3001/api/places?lat=${latitude}&lng=${longitude}`)
-            .then(res => res.json())
-            .then(json => {
-                setPlaces(json)
-            })
-    }
+
+import fetchData from '../scripts/fetchData'
+
+export default function Home(props) {
+
+    const { places } = props
+
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(fetchPlaces)
+        let isCancelled = false;
+        const abortController = new AbortController();
+
+        fetchData(['any'], abortController)
+            .then(data => {
+                if (!isCancelled) {
+                    props.setPlaces(data)
+                }
+            })
+
+        return () => {
+            isCancelled = true;
+
+        }
     }, [])
 
     return (
