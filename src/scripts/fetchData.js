@@ -1,8 +1,18 @@
-export default async function fetchData(types = [], abortController) {
+export default async function fetchData(types = ['any'], abortController) {
     const URL = process.env.REACT_APP_API_URL
-    let location = await new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject))
+
+    let location = await new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject)).catch(e => console.log(e))
+    if (!location) {
+        location = {
+            coords: {
+                latitude: 30.2672,
+                longitude: -97.7431
+            }
+        }
+    }
 
     let { latitude, longitude } = location.coords
+    console.log(latitude, longitude)
 
     return Promise.all(types.map(type => {
         return new Promise(res => {
