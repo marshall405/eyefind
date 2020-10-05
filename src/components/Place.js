@@ -34,7 +34,7 @@ export default function Place() {
             <p> {data.formatted_phone_number} </p>
             {/* <p> {data.opening_hours.open_now ? 'OPEN' : 'CLOSED'} </p> */}
             {
-                data.photos.map(photo => <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyDQ84D93sPs_alPUTL3nh5V8_5er9zdi50`} />)
+                data.photos.map(photo => <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=`} />)
             }
         </div>
 
