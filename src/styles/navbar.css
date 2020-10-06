@@ -52,3 +52,23 @@
   .fa-plane {
     transform: rotate(-40deg);
   }
+
+
+  /* MEDIA QUERIES */
+
+@media screen and (max-width: 808px){
+  .navbar .nav-links ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .link-vert {
+    display: none;
+  }
+  .navbar .nav-links ul li {
+    background-color: rgba(236, 236, 236, 0.527);
+    margin: 1px;
+    border-radius: 5px;
+    
+  }
+}

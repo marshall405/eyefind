@@ -12,10 +12,10 @@ export default async function fetchData(types = ['any'], abortController) {
     }
 
     let { latitude, longitude } = location.coords
-    console.log(latitude, longitude)
 
     return Promise.all(types.map(type => {
         return new Promise(res => {
+            console.log(URL)
             fetch(`${URL}?lat=${latitude}&lng=${longitude}&type=${type}`, { signal: abortController.signal })
                 .then(res => res.json())
                 .then(json => {

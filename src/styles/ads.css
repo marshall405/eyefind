@@ -52,3 +52,12 @@
 .ad:nth-child(10){
     margin-right: 0px;
 } */
+
+@media screen and (max-width: 809px) {
+    .ads-container {
+        justify-content: center;
+    }
+    .ad {
+        width: 200px;
+    }
+}

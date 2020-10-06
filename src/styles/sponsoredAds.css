@@ -1,6 +1,7 @@
 .sponsored-ads-container {
     margin: 30px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
 }
@@ -101,4 +102,26 @@
     to {
         transform: rotate(360deg)
     }
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 996px){
+    .sponsored-ads-container {
+        justify-content: center;
+    }
+   
+
+}
+
+@media screen and (max-width: 663px){
+    .sponsored-ads-container a {
+        width: 97%;
+    }
+    .sponsored-ad {
+        width: 100%;
+    }
+
 }

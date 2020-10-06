@@ -35,10 +35,23 @@
   border: none;
   background: var(--secondary-color);
   cursor: pointer;
-  width: 25%;
+  width: 30%;
   /* filter: brightness(85%); */
 }
 .search-container button:hover {
   background: var(--secondary-color-hover)
   /* filter: brightness(100%); */
 }
+
+
+    /* MEDIA QUERIES */
+
+    @media screen and (max-width: 800px){
+      .search-container {
+        justify-content: space-evenly;
+      }
+      .search-bar{
+        width: 60%;
+      }
+    
+    }
