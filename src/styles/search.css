@@ -35,7 +35,7 @@
   border: none;
   background: var(--secondary-color);
   cursor: pointer;
-  width: 30%;
+  width: 23%;
   /* filter: brightness(85%); */
 }
 .search-container button:hover {
@@ -52,6 +52,15 @@
       }
       .search-bar{
         width: 60%;
+      }
+    
+    }
+
+
+    @media screen and (max-width: 515px){
+    
+      .search-container button {
+        width: 35%;
       }
     
     }

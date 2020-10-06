@@ -7,11 +7,11 @@ import './App.css';
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import MediaAndEntertainment from "./components/MediaAndEntertainment";
-import FoodAndDrink from "./components/FoodAndDrink";
-import MoneyAndServices from "./components/MoneyAndServices";
-import TravelAndTransport from "./components/TravelAndTransport";
-import FashionAndHealth from "./components/FashionAndHealth";
+import MediaAndEntertainment from "./components/link_components/MediaAndEntertainment";
+import FoodAndDrink from "./components/link_components/FoodAndDrink";
+import MoneyAndServices from "./components/link_components/MoneyAndServices";
+import TravelAndTransport from "./components/link_components/TravelAndTransport";
+import FashionAndHealth from "./components/link_components/FashionAndHealth";
 import Place from "./components/Place";
 function App() {
   const [home, setHome] = useState([])
