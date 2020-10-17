@@ -12,7 +12,6 @@ export default function Ad({ video }) {
                 frameBorder=""
                 allowFullScreen
                 src={`https://www.youtube.com/embed/${video}`}
-                onMouseEnter={autoPlay}
             >
             </iframe>
         </div>
