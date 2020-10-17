@@ -10,7 +10,7 @@ export default function SponsoredAd(props) {
             <div className="sponsored-ad" >
                 <p> SPONSORED ADVERTISEMENT </p>
                 <div className="ad-image">
-                    <iframe id="player" type="text/html" width="330px" height="200"
+                    <iframe id="player" type="text/html" width="100%" height="100%"
                         src={`https://www.youtube.com/embed/${video}`}
                         frameBorder="0"></iframe>
                 </div>

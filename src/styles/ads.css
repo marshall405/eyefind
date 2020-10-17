@@ -17,14 +17,16 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    width: 320px;
+    width: 310px;
     height: 230px;
     margin: 2px;
     background: rgba(0, 0, 0, 0.8);
     color: #FFF;
     cursor: pointer;
     overflow: hidden;
-    filter: brightness(40%);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px var(--primary-gold-border);
+    filter: brightness(60%);
 }
 
 .ad:hover {
