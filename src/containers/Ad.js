@@ -6,9 +6,12 @@ export default function Ad({ video }) {
     return (
 
         <div className="ad adShow">
-            <iframe id="player" type="text/html" width="250px" height="230px" allowFullScreen
+            <iframe title="Youtube Video - GTA" id="player" type="text/html" width="100%" height="100%" allowFullScreen
                 src={`https://www.youtube.com/embed/${video}`}
-                frameborder=""></iframe>
+                frameBorder=""
+                onClick={e => console.log(e.data)}
+            >
+            </iframe>
         </div>
 
     )
