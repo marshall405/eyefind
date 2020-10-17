@@ -11,7 +11,7 @@ export default function Ad({ video }) {
             {/* <img className="location-image" src={ad.img_src} alt={ad.name} /> */}
             <iframe id="player" type="text/html" width="250px" height="230px"
                 src={`https://www.youtube.com/embed/${video}`}
-                frameborder="2"></iframe>
+                frameborder=""></iframe>
         </div>
 
     )
