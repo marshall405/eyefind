@@ -6,10 +6,7 @@ export default function Ad({ video }) {
     return (
 
         <div className="ad adShow">
-            {/* <h1> {ad.name}</h1> */}
-            {/* <i className="far fa-gem"></i> */}
-            {/* <img className="location-image" src={ad.img_src} alt={ad.name} /> */}
-            <iframe id="player" type="text/html" width="250px" height="230px"
+            <iframe id="player" type="text/html" width="250px" height="230px" allowFullScreen
                 src={`https://www.youtube.com/embed/${video}`}
                 frameborder=""></iframe>
         </div>

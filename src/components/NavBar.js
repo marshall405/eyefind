@@ -8,7 +8,7 @@ export default function NavBar() {
             <div className="nav-links">
                 <ul>
                     <li>
-                        <Link to="/media">
+                        <Link to="/">
                             <span className="fas fa-mobile-alt fa-2x link-icon"></span>
                             <div>
                                 <span className="link-text"> MEDIA AND ENTERTAINMENT</span>
@@ -19,7 +19,7 @@ export default function NavBar() {
                     <div className="link-vert"></div>
 
                     <li>
-                        <Link to="/victual">
+                        <Link to="/">
                             <span className="fas fa-hamburger fa-2x"></span>
                             <div>
                                 <span className="link-text">FOOD <br /> AND DRINK</span>
@@ -30,7 +30,7 @@ export default function NavBar() {
                     <div className="link-vert"></div>
 
                     <li>
-                        <Link to='/financials'>
+                        <Link to='/'>
                             <span className="fas fa-comment-dollar fa-2x"></span>
                             <div>
                                 <span className="link-text">MONEY<br />AND SERVICES</span>
@@ -42,7 +42,7 @@ export default function NavBar() {
                     <div className="link-vert"></div>
 
                     <li>
-                        <Link to="/travel">
+                        <Link to="/">
                             <span className="fas fa-plane fa-2x"></span>
                             <div>
                                 <span className="link-text">TRAVEL <br /> AND TRANSPORT</span>
@@ -53,7 +53,7 @@ export default function NavBar() {
                     <div className="link-vert"></div>
 
                     <li>
-                        <Link to="/personal">
+                        <Link to="/">
                             <span className="fas fa-shopping-bag fa-2x"></span>
                             <div>
                                 <span className="link-text">FASHION <br /> AND HEALTH</span>

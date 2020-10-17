@@ -24,10 +24,11 @@
     color: #FFF;
     cursor: pointer;
     overflow: hidden;
+    filter: brightness(40%);
 }
 
-.ad:hover .location-image{
-    z-index: 2;
+.ad:hover {
+    filter: brightness(100%);
 }
 
 .ad h1 {
