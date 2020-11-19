@@ -9,6 +9,7 @@
 ## A take on a the eyefind.info website used in the Grand Theft Auto series.
 * Custom CSS to achieve a look-a-like
 * Fetches a few YouTube videos of GTA gameplay
+* Hosted on Netlify - My new favorite service for hosting projects!
 
 ## Fun Story
 *This project was origninally using Google Places API to pull up real places around you! I ended up making to many requests (approx 50,000 in two days) because I wanted to fetch **Way** to many places. Would have paid roughly $480 had it not been for the Developer Credits I had. Needless to say, I quickly canceled my API key and moved to simply use YouTube Videos* 
