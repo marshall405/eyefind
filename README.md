@@ -1,6 +1,7 @@
-<img src="./src/media/screenshot.png" alt="screenshot of eyefind.info">
-
 # eyefind.info
+<img width="500" src="./src/media/screenshot.png" alt="screenshot of eyefind.info">
+
+
 
 ## Attempts to create a real world eyefind.info website like the one used in Grand Theft Auto. 
 
