@@ -1,5 +1,7 @@
 # eyefind.info
-<img width="500" src="./src/media/screenshot.png" alt="screenshot of eyefind.info">
+<p align="center">
+  <img width="500" src="./src/media/screenshot.png" alt="screenshot of eyefind.info">
+</p>
 
 
 
